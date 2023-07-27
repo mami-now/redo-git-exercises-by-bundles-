@@ -1,5 +1,7 @@
-# Git exercises by bundles 
-  this is the series of exercises bundle by bundle
+# Git exercises by bundles
+
+ this project will  be use a series of exercise
+
    # these are the used commands exercise1 bundle1 and 2
 Your branch is up to date with 'origin/dev'.
 
@@ -317,4 +319,105 @@ To https://github.com/mami-now/redo-git-exercises-by-bundles-.git
    be67f69..972f62a  dev -> dev
 
 user@DESKTOP-JN09K5I MINGW64 ~/Desktop/git-exercises%bybundles (dev)
+$
+user@DESKTOP-JN09K5I MINGW64 ~/Desktop/git-exercises%bybundles (dev)
+$ git commit -a -m "hello"
+[dev 452de27] hello
+ 2 files changed, 203 insertions(+), 4 deletions(-)
+
+user@DESKTOP-JN09K5I MINGW64 ~/Desktop/git-exercises%bybundles (dev)
+$ git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 1.83 KiB | 937.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/mami-now/redo-git-exercises-by-bundles-.git
+   972f62a..452de27  dev -> dev
+
+user@DESKTOP-JN09K5I MINGW64 ~/Desktop/git-exercises%bybundles (dev)
+$ git stash list
+
+user@DESKTOP-JN09K5I MINGW64 ~/Desktop/git-exercises%bybundles (dev)
+$ git stash list
+
+user@DESKTOP-JN09K5I MINGW64 ~/Desktop/git-exercises%bybundles (dev)
+$ git stash pop stash@{2}
+error: stash@{2} is not a valid reference
+
+user@DESKTOP-JN09K5I MINGW64 ~/Desktop/git-exercises%bybundles (dev)
+$ git checkout -b ft/bundle-2
+Switched to a new branch 'ft/bundle-2'
+
+user@DESKTOP-JN09K5I MINGW64 ~/Desktop/git-exercises%bybundles (ft/bundle-2)
+$ git push orgin ft/bundle-2
+fatal: 'orgin' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+user@DESKTOP-JN09K5I MINGW64 ~/Desktop/git-exercises%bybundles (ft/bundle-2)
+$ git push origin ft/bundle-2
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0
+remote: 
+remote: Create a pull request for 'ft/bundle-2' on GitHub by visiting:
+remote:      https://github.com/mami-now/redo-git-exercises-by-bundles-/pull/new/ft/bundle-2
+remote:
+To https://github.com/mami-now/redo-git-exercises-by-bundles-.git
+ * [new branch]      ft/bundle-2 -> ft/bundle-2
+
+user@DESKTOP-JN09K5I MINGW64 ~/Desktop/git-exercises%bybundles (ft/bundle-2)
+$ git status
+On branch ft/bundle-2
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        service.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+user@DESKTOP-JN09K5I MINGW64 ~/Desktop/git-exercises%bybundles (ft/bundle-2)
+$ git add .
+
+user@DESKTOP-JN09K5I MINGW64 ~/Desktop/git-exercises%bybundles (ft/bundle-2)
+$ git status
+On branch ft/bundle-2
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   service.html
+
+
+user@DESKTOP-JN09K5I MINGW64 ~/Desktop/git-exercises%bybundles (ft/bundle-2)
+$ git commit -m "the other new file on new branch"
+[ft/bundle-2 ac47edb] the other new file on new branch
+ 1 file changed, 11 insertions(+)
+ create mode 100644 service.html
+
+user@DESKTOP-JN09K5I MINGW64 ~/Desktop/git-exercises%bybundles (ft/bundle-2)
+$ git push
+fatal: The current branch ft/bundle-2 has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin ft/bundle-2
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+
+user@DESKTOP-JN09K5I MINGW64 ~/Desktop/git-exercises%bybundles (ft/bundle-2)
+$   git push --set-upstream origin ft/bundle-2
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 447 bytes | 447.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/mami-now/redo-git-exercises-by-bundles-.git
+   452de27..ac47edb  ft/bundle-2 -> ft/bundle-2
+branch 'ft/bundle-2' set up to track 'origin/ft/bundle-2'.
+
+user@DESKTOP-JN09K5I MINGW64 ~/Desktop/git-exercises%bybundles (ft/bundle-2)
 $
