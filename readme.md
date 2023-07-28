@@ -217,3 +217,60 @@ Your branch is up to date with 'origin/main'.
 
 user@DESKTOP-JN09K5I MINGW64 ~/Desktop/git-exercises%bybundles (main)
 $
+
+# Bundle3 Exercise1 /commands
+
+
+user@DESKTOP-JN09K5I MINGW64 ~/Desktop/git-exercises%bybundles (main)
+$ git checkout -b ft/team-page
+Switched to a new branch 'ft/team-page'
+
+user@DESKTOP-JN09K5I MINGW64 ~/Desktop/git-exercises%bybundles (ft/team-page)
+$ git push origin ft/team-page
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0
+remote: 
+remote: Create a pull request for 'ft/team-page' on GitHub by visiting:
+remote:      https://github.com/mami-now/redo-git-exercises-by-bundles-/pull/new/ft/team-page
+remote:
+To https://github.com/mami-now/redo-git-exercises-by-bundles-.git
+ * [new branch]      ft/team-page -> ft/team-page
+
+user@DESKTOP-JN09K5I MINGW64 ~/Desktop/git-exercises%bybundles (ft/team-page)
+$ git add .
+
+user@DESKTOP-JN09K5I MINGW64 ~/Desktop/git-exercises%bybundles (ft/team-page)
+$ git commit -m "this is Bundle3 "
+[ft/team-page 0fa5054] this is Bundle3
+ 1 file changed, 12 insertions(+)
+ create mode 100644 team.html
+
+user@DESKTOP-JN09K5I MINGW64 ~/Desktop/git-exercises%bybundles (ft/team-page)
+$ git push
+fatal: The current branch ft/team-page has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin ft/team-page
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+
+user@DESKTOP-JN09K5I MINGW64 ~/Desktop/git-exercises%bybundles (ft/team-page)
+$ git push --set-upstream origin ft/team-page
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 443 bytes | 221.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/mami-now/redo-git-exercises-by-bundles-.git
+   b715a5e..0fa5054  ft/team-page -> ft/team-page
+branch 'ft/team-page' set up to track 'origin/ft/team-page'.
+
+user@DESKTOP-JN09K5I MINGW64 ~/Desktop/git-exercises%bybundles (ft/team-page)
+$ git push
+Everything up-to-date
+
+user@DESKTOP-JN09K5I MINGW64 ~/Desktop/git-exercises%bybundles (ft/team-page)
+$
