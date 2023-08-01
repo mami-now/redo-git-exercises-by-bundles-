@@ -3,7 +3,7 @@
  
   # Bundle2 exercise2
 
-  user@DESKTOP-JN09K5I MINGW64 ~/Desktop/git-exercises%bybundles (main)
+ ``` bash user@DESKTOP-JN09K5I MINGW64 ~/Desktop/git-exercises%bybundles (main)
 $ git checkout -b ft/service-redesign
 Switched to a new branch 'ft/service-redesign'
 
@@ -216,4 +216,4 @@ Switched to branch 'main'
 Your branch is up to date with 'origin/main'.
 
 user@DESKTOP-JN09K5I MINGW64 ~/Desktop/git-exercises%bybundles (main)
-$
+$``` 
