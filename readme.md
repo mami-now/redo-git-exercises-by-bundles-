@@ -171,7 +171,7 @@ $ git add .
 
 user@DESKTOP-JN09K5I MINGW64 ~/Desktop/git-exercises%bybundles (main)
 $ git commit -m  
-error: switch `m' requires a value
+error: switch 'm' requires a value
 
 user@DESKTOP-JN09K5I MINGW64 ~/Desktop/git-exercises%bybundles (main)
 $ git commit -m  "this is the other change "
@@ -216,4 +216,202 @@ Switched to branch 'main'
 Your branch is up to date with 'origin/main'.
 
 user@DESKTOP-JN09K5I MINGW64 ~/Desktop/git-exercises%bybundles (main)
-$``` 
+
+``` 
+## Bundle3 
+
+### Exercise 1
+
+ ```bash
+user@DESKTOP-JN09K5I MINGW64 ~/Desktop/git-exercises%bybundles (main)
+$ git checkout -b ft/team-page
+Switched to a new branch 'ft/team-page'
+
+user@DESKTOP-JN09K5I MINGW64 ~/Desktop/git-exercises%bybundles (ft/team-page)
+$ git add .
+
+user@DESKTOP-JN09K5I MINGW64 ~/Desktop/git-exercises%bybundles (ft/team-page)
+$ git commit -m "ths is my team page"
+[ft/team-page 39f33d0] ths is my team page
+ 1 file changed, 11 insertions(+)
+ create mode 100644 team.html
+
+user@DESKTOP-JN09K5I MINGW64 ~/Desktop/git-exercises%bybundles (ft/team-page)
+$ git push
+fatal: The current branch ft/team-page has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin ft/team-page
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+
+user@DESKTOP-JN09K5I MINGW64 ~/Desktop/git-exercises%bybundles (ft/team-page)
+$
+    git push --set-upstream origin ft/team-page
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 444 bytes | 444.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/team-page' on GitHub by visiting:
+remote:      https://github.com/mami-now/redo-git-exercises-by-bundles-/pull/new/ft/team-page
+remote:
+To https://github.com/mami-now/redo-git-exercises-by-bundles-.git
+ * [new branch]      ft/team-page -> ft/team-page
+branch 'ft/team-page' set up to track 'origin/ft/team-page'.
+
+user@DESKTOP-JN09K5I MINGW64 ~/Desktop/git-exercises%bybundles (ft/team-page)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+user@DESKTOP-JN09K5I MINGW64 ~/Desktop/git-exercises%bybundles (main)
+$ git checkout -b ft/contact-page
+Switched to a new branch 'ft/contact-page'
+
+user@DESKTOP-JN09K5I MINGW64 ~/Desktop/git-exercises%bybundles (ft/contact-page)
+$ git checkout ft/team-page
+Switched to branch 'ft/team-page'
+Your branch is up to date with 'origin/ft/team-page'.
+
+user@DESKTOP-JN09K5I MINGW64 ~/Desktop/git-exercises%bybundles (ft/team-page)
+$ git log
+commit 39f33d0ade5c3350a404b3eb2cf0d6475792c3e4 (HEAD -> ft/team-page, origin/ft/team-page)
+Author: mamijose <mmammyj@gmail.com>
+Date:   Wed Aug 2 12:40:53 2023 +0200
+
+    ths is my team page
+
+commit e1e53074d82236ed91f281c3ceb3aeed5273d51c (origin/main, main, ft/contact-page)
+Author: mamijose <mmammyj@gmail.com>
+Date:   Tue Aug 1 12:26:45 2023 +0200
+
+    the other change on Readmefile
+
+
+user@DESKTOP-JN09K5I MINGW64 ~/Desktop/git-exercises%bybundles (ft/team-page)
+$ git checkout  ft/contact-page
+Switched to branch 'ft/contact-page'
+
+user@DESKTOP-JN09K5I MINGW64 ~/Desktop/git-exercises%bybundles (ft/contact-page)
+$ git cherry-pick 39f33d0ade5c3350a404b3eb2cf0d6475792c3e4
+[ft/contact-page a2e2a42] ths is my team page
+ Date: Wed Aug 2 12:40:53 2023 +0200
+ 1 file changed, 11 insertions(+)
+ create mode 100644 team.html
+
+user@DESKTOP-JN09K5I MINGW64 ~/Desktop/git-exercises%bybundles (ft/contact-page)
+$ git add .
+
+user@DESKTOP-JN09K5I MINGW64 ~/Desktop/git-exercises%bybundles (ft/contact-page)
+$ git commit -m "the contact page is added on"
+[ft/contact-page 8e3dce8] the contact page is added on
+ 1 file changed, 11 insertions(+)
+ create mode 100644 contact.html
+
+user@DESKTOP-JN09K5I MINGW64 ~/Desktop/git-exercises%bybundles (ft/contact-page)
+$ git push 
+fatal: The current branch ft/contact-page has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin ft/contact-page
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+
+user@DESKTOP-JN09K5I MINGW64 ~/Desktop/git-exercises%bybundles (ft/contact-page)
+$ git push --set-upstream origin ft/contact-page
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 907 bytes | 907.00 KiB/s, done.
+Total 6 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), done.
+remote:
+remote: Create a pull request for 'ft/contact-page' on GitHub by visiting:
+remote:      https://github.com/mami-now/redo-git-exercises-by-bundles-/pull/new/ft/contact-page
+remote:
+To https://github.com/mami-now/redo-git-exercises-by-bundles-.git
+ * [new branch]      ft/contact-page -> ft/contact-page
+branch 'ft/contact-page' set up to track 'origin/ft/contact-page'.
+
+user@DESKTOP-JN09K5I MINGW64 ~/Desktop/git-exercises%bybundles (ft/contact-page)
+$ git checkout -b ft/faq-page
+Switched to a new branch 'ft/faq-page'
+
+user@DESKTOP-JN09K5I MINGW64 ~/Desktop/git-exercises%bybundles (ft/faq-page)
+$ git add .
+
+user@DESKTOP-JN09K5I MINGW64 ~/Desktop/git-exercises%bybundles (ft/faq-page)
+$ git commit -m "the faqs page is added on"
+[ft/faq-page 5d2d383] the faqs page is added on
+ 1 file changed, 11 insertions(+)
+ create mode 100644 faq.html
+
+user@DESKTOP-JN09K5I MINGW64 ~/Desktop/git-exercises%bybundles (ft/faq-page)
+$ git push
+fatal: The current branch ft/faq-page has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin ft/faq-page
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+
+user@DESKTOP-JN09K5I MINGW64 ~/Desktop/git-exercises%bybundles (ft/faq-page)
+$  git push --set-upstream origin ft/faq-page
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 430 bytes | 215.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/faq-page' on GitHub by visiting:
+remote:      https://github.com/mami-now/redo-git-exercises-by-bundles-/pull/new/ft/faq-page
+remote:
+To https://github.com/mami-now/redo-git-exercises-by-bundles-.git
+ * [new branch]      ft/faq-page -> ft/faq-page
+branch 'ft/faq-page' set up to track 'origin/ft/faq-page'.
+
+user@DESKTOP-JN09K5I MINGW64 ~/Desktop/git-exercises%bybundles (ft/faq-page)
+$ git revert 39f33d0ade5c3350a404b3eb2cf0d6475792c3e4
+hint: Waiting for your editor to close the file... Vim: Error reading input, exiting...
+Vim: Finished.
+error: There was a problem with the editor 'vi'.
+Please supply the message using either -m or -F option.
+
+user@DESKTOP-JN09K5I MINGW64 ~/Desktop/git-exercises%bybundles (ft/faq-page)
+$ git add .
+
+user@DESKTOP-JN09K5I MINGW64 ~/Desktop/git-exercises%bybundles (ft/faq-page)
+$ git commit -m "the end of bundle3 exercise1 "
+[ft/faq-page 9767299] the end of bundle3 exercise1
+ 1 file changed, 11 deletions(-)
+ delete mode 100644 team.html
+
+user@DESKTOP-JN09K5I MINGW64 ~/Desktop/git-exercises%bybundles (ft/faq-page)
+$ git push
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (2/2), 227 bytes | 227.00 KiB/s, done.
+Total 2 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/mami-now/redo-git-exercises-by-bundles-.git
+   5d2d383..9767299  ft/faq-page -> ft/faq-page
+
+user@DESKTOP-JN09K5I MINGW64 ~/Desktop/git-exercises%bybundles (ft/faq-page)
+
+
+  ```
