@@ -415,3 +415,117 @@ user@DESKTOP-JN09K5I MINGW64 ~/Desktop/git-exercises%bybundles (ft/faq-page)
 
 
   ```
+  #### Bunble3 - Exercise2
+  ``` bash
+
+  user@DESKTOP-JN09K5I MINGW64 ~/Desktop/git-exercises%bybundles (ft/faq-page)
+$ git checkout -b  ft/home-page-redesign
+Switched to a new branch 'ft/home-page-redesign'
+
+user@DESKTOP-JN09K5I MINGW64 ~/Desktop/git-exercises%bybundles (ft/home-page-redesign)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+user@DESKTOP-JN09K5I MINGW64 ~/Desktop/git-exercises%bybundles (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   services.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+user@DESKTOP-JN09K5I MINGW64 ~/Desktop/git-exercises%bybundles (main)
+$ git add .
+
+user@DESKTOP-JN09K5I MINGW64 ~/Desktop/git-exercises%bybundles (main)
+$ git commit -m " services page is modified"
+[main e2206b7]  services page is modified
+ 1 file changed, 3 insertions(+)
+
+user@DESKTOP-JN09K5I MINGW64 ~/Desktop/git-exercises%bybundles (main)
+$ git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 336 bytes | 336.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/mami-now/redo-git-exercises-by-bundles-.git
+   e1e5307..e2206b7  main -> main
+
+user@DESKTOP-JN09K5I MINGW64 ~/Desktop/git-exercises%bybundles (main)
+$ git checkout ft/home-page-redesign
+Switched to branch 'ft/home-page-redesign'
+
+user@DESKTOP-JN09K5I MINGW64 ~/Desktop/git-exercises%bybundles (ft/home-page-redesign)
+$ git rebase
+There is no tracking information for the current branch.
+Please specify which branch you want to rebase against.
+See git-rebase(1) for details.
+
+    git rebase '<branch>'
+
+If you wish to set tracking information for this branch you can do so with:
+
+    git branch --set-upstream-to=<remote>/<branch> ft/home-page-redesign
+
+
+user@DESKTOP-JN09K5I MINGW64 ~/Desktop/git-exercises%bybundles (ft/home-page-redesign)
+$ git rebase main
+Successfully rebased and updated refs/heads/ft/home-page-redesign.
+
+user@DESKTOP-JN09K5I MINGW64 ~/Desktop/git-exercises%bybundles (ft/home-page-redesign)
+$ git status
+On branch ft/home-page-redesign
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   index.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+user@DESKTOP-JN09K5I MINGW64 ~/Desktop/git-exercises%bybundles (ft/home-page-redesign)
+$ git add .
+
+user@DESKTOP-JN09K5I MINGW64 ~/Desktop/git-exercises%bybundles (ft/home-page-redesign)
+$ git commit -m "the homepaage /index.html is modified "
+[ft/home-page-redesign f6748a1] the homepaage /index.html is modified
+ 1 file changed, 1 insertion(+)
+
+user@DESKTOP-JN09K5I MINGW64 ~/Desktop/git-exercises%bybundles (ft/home-page-redesign)
+$ git push
+fatal: The current branch ft/home-page-redesign has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin ft/home-page-redesign
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+
+user@DESKTOP-JN09K5I MINGW64 ~/Desktop/git-exercises%bybundles (ft/home-page-redesign)
+$  git push --set-upstream origin ft/home-page-redesign
+Enumerating objects: 20, done.
+Counting objects: 100% (20/20), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (17/17), done.
+Writing objects: 100% (17/17), 3.99 KiB | 1020.00 KiB/s, done.
+Total 17 (delta 8), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (8/8), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/home-page-redesign' on GitHub by visiting:
+remote:      https://github.com/mami-now/redo-git-exercises-by-bundles-/pull/new/ft/home-page-redesign
+remote:
+To https://github.com/mami-now/redo-git-exercises-by-bundles-.git
+ * [new branch]      ft/home-page-redesign -> ft/home-page-redesign
+branch 'ft/home-page-redesign' set up to track 'origin/ft/home-page-redesign'.
+
+user@DESKTOP-JN09K5I MINGW64 ~/Desktop/git-exercises%bybundles (ft/home-page-redesign)
+$
+  ``` 
