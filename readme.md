@@ -171,7 +171,7 @@ $ git add .
 
 user@DESKTOP-JN09K5I MINGW64 ~/Desktop/git-exercises%bybundles (main)
 $ git commit -m  
-error: switch `m' requires a value
+error: switch 'm' requires a value
 
 user@DESKTOP-JN09K5I MINGW64 ~/Desktop/git-exercises%bybundles (main)
 $ git commit -m  "this is the other change "
@@ -216,4 +216,154 @@ Switched to branch 'main'
 Your branch is up to date with 'origin/main'.
 
 user@DESKTOP-JN09K5I MINGW64 ~/Desktop/git-exercises%bybundles (main)
-$``` 
+$
+```
+## Bundle4 - exercise1
+```bash
+
+user@DESKTOP-JN09K5I MINGW64 ~/Desktop/git-exercises%bybundles (main)
+$ git remote add git_copy https://github.com/mami-now/git-exercises-clone-.git
+
+user@DESKTOP-JN09K5I MINGW64 ~/Desktop/git-exercises%bybundles (main)
+$ git remote
+git_copy
+origin
+
+user@DESKTOP-JN09K5I MINGW64 ~/Desktop/git-exercises%bybundles (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   index.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+user@DESKTOP-JN09K5I MINGW64 ~/Desktop/git-exercises%bybundles (main)
+$ git add .
+
+user@DESKTOP-JN09K5I MINGW64 ~/Desktop/git-exercises%bybundles (main)
+$ git commit -m "feature added from home page"
+[main a5ad70e] feature added from home page
+ 1 file changed, 1 insertion(+)
+
+user@DESKTOP-JN09K5I MINGW64 ~/Desktop/git-exercises%bybundles (main)
+$ git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 380 bytes | 380.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/mami-now/redo-git-exercises-by-bundles-.git
+   e2206b7..a5ad70e  main -> main
+
+user@DESKTOP-JN09K5I MINGW64 ~/Desktop/git-exercises%bybundles (main)
+$ git add .
+
+user@DESKTOP-JN09K5I MINGW64 ~/Desktop/git-exercises%bybundles (main)
+$ git commit -m "this is the new changes  on home page "
+[main 02f01bf] this is the new changes  on home page
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+user@DESKTOP-JN09K5I MINGW64 ~/Desktop/git-exercises%bybundles (main)
+$ git push orgin
+fatal: 'orgin' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+user@DESKTOP-JN09K5I MINGW64 ~/Desktop/git-exercises%bybundles (main)
+$ git push origin
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 387 bytes | 387.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/mami-now/redo-git-exercises-by-bundles-.git
+   a5ad70e..02f01bf  main -> main
+
+user@DESKTOP-JN09K5I MINGW64 ~/Desktop/git-exercises%bybundles (main)
+$ git remoted origin https://github.com/mami-now/git-exercises-clone-.git
+git: 'remoted' is not a git command. See 'git --help'.
+
+The most similar command is
+        remote-fd
+
+user@DESKTOP-JN09K5I MINGW64 ~/Desktop/git-exercises%bybundles (main)
+$ git push origin
+Everything up-to-date
+
+user@DESKTOP-JN09K5I MINGW64 ~/Desktop/git-exercises%bybundles (main)
+$ git push copy-origin
+fatal: 'copy-origin' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+user@DESKTOP-JN09K5I MINGW64 ~/Desktop/git-exercises%bybundles (main)
+$ git push git-copy
+fatal: 'git-copy' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+user@DESKTOP-JN09K5I MINGW64 ~/Desktop/git-exercises%bybundles (main)
+$ git remote add git-copy https://github.com/mami-now/git-exercises-clone-.git
+
+user@DESKTOP-JN09K5I MINGW64 ~/Desktop/git-exercises%bybundles (main)
+$ git remote add git-copy https://github.com/mami-now/git-exercises-clone-.git
+error: remote git-copy already exists.
+
+user@DESKTOP-JN09K5I MINGW64 ~/Desktop/git-exercises%bybundles (main)
+$ git push git-copy
+Enumerating objects: 27, done.
+Counting objects: 100% (27/27), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (26/26), done.
+Writing objects: 100% (27/27), 4.07 KiB | 1.35 MiB/s, done.
+Total 27 (delta 8), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (8/8), done.
+To https://github.com/mami-now/git-exercises-clone-.git
+ * [new branch]      main -> main
+
+user@DESKTOP-JN09K5I MINGW64 ~/Desktop/git-exercises%bybundles (main)
+$ git push git_copy
+Everything up-to-date
+
+user@DESKTOP-JN09K5I MINGW64 ~/Desktop/git-exercises%bybundles (main)
+$ git remote -v
+git-copy        https://github.com/mami-now/git-exercises-clone-.git (fetch)
+git-copy        https://github.com/mami-now/git-exercises-clone-.git (push)
+git_copy        https://github.com/mami-now/git-exercises-clone-.git (fetch)
+git_copy        https://github.com/mami-now/git-exercises-clone-.git (push)
+origin  https://github.com/mami-now/redo-git-exercises-by-bundles-.git (fetch)
+origin  https://github.com/mami-now/redo-git-exercises-by-bundles-.git (push)
+
+user@DESKTOP-JN09K5I MINGW64 ~/Desktop/git-exercises%bybundles (main)
+$ git remote rm git-copy 
+
+user@DESKTOP-JN09K5I MINGW64 ~/Desktop/git-exercises%bybundles (main)
+$ git -v
+git version 2.40.1.windows.1
+
+user@DESKTOP-JN09K5I MINGW64 ~/Desktop/git-exercises%bybundles (main)
+$ git remote -v
+git_copy        https://github.com/mami-now/git-exercises-clone-.git (fetch)
+git_copy        https://github.com/mami-now/git-exercises-clone-.git (push)
+origin  https://github.com/mami-now/redo-git-exercises-by-bundles-.git (fetch)
+origin  https://github.com/mami-now/redo-git-exercises-by-bundles-.git (push)
+
+user@DESKTOP-JN09K5I MINGW64 ~/Desktop/git-exercises%bybundles (main)
+$
+
+
+ ```
